@@ -1,5 +1,5 @@
-import React from "react";
-import { Tab, Menu, Icon } from "semantic-ui-react";
+import React, {Component} from "react";
+import { Menu, Icon } from "semantic-ui-react";
 import { NavLink } from "react-router-dom";
 
 // TODO: Add missing menu/tabs/nav below
@@ -10,6 +10,57 @@ import { NavLink } from "react-router-dom";
 // https://react.semantic-ui.com/elements/button/
 // https://react.semantic-ui.com/collections/breadcrumb/
 
-export default function TabNav() {
+export default class TabNav  extends Component {
+        state = {}
+      
+        handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+      
+        render() {
+          const { activeItem } = this.state
+      
+          return (
+            <Menu>
+              <NavLink to="/">
+                <Menu.Item
+                    name='home_page'
+                    active={activeItem === 'home_page'}
+                    onClick={this.handleItemClick}
+                >
+                <Icon name='home' /> Home Page
+                </Menu.Item>
+              </NavLink>
+      
+              <NavLink to="/characters">
+                <Menu.Item
+                    name='characters'
+                    active={activeItem === 'characters'}
+                    onClick={this.handleItemClick}
+                >
+                <Icon name='users' /> Characters
+                </Menu.Item>
+              </NavLink>
+      
+              <NavLink to="/locations">
+                <Menu.Item
+                    name='locations'
+                    active={activeItem === 'locations'}
+                    onClick={this.handleItemClick}
+                >
+                <Icon name='map' /> Locations
+                </Menu.Item>
+              </NavLink>
 
+              <NavLink to="/episodes">
+                <Menu.Item
+                    name='episodes'
+                    active={activeItem === 'episodes'}
+                    onClick={this.handleItemClick}
+                >
+                <Icon name='video' /> Episodes
+                </Menu.Item>
+              </NavLink>
+
+            </Menu>
+          )
+        }
 };

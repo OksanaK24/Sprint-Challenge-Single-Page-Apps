@@ -1,17 +1,18 @@
 import React from "react";
-import { Card } from 'semantic-ui-react';
+import { Card } from 'semantic-ui-react'
 
-export default function LocationCard(props) {
+export default function EpisodeCard(props) {
   return(
     <Card>
     <Card.Content header={props.name} />
     <Card.Content>
       <Card.Description>
-        <p>{props.type} {props.dimension}</p>
+        <p>{props.air_date}</p>
+        <p>{props.episode}</p>
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
-      <p>{props.residents.length} residents </p>
+     <p> {props.characters.length} characters </p>
     </Card.Content>
   </Card>
   );
