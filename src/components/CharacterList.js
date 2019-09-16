@@ -15,7 +15,7 @@ export default function CharacterList() {
         setCharacter(res.data.results)
        })
       .catch (err => console.log ("Try to fix your code"))
-  }, []);
+  }, [character]);
 
   return (
     <section className="character-list grid-view">

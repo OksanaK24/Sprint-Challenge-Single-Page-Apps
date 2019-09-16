@@ -12,7 +12,7 @@ export default function LocationsList() {
         setLocation(res.data.results)
        })
       .catch (err => console.log ("Try to fix your code"))
-  }, []);
+  }, [location]);
 
   return (
     <section className="character-list grid-view">

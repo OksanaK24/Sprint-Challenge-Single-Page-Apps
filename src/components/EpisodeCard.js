@@ -12,7 +12,7 @@ export default function EpisodeCard(props) {
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
-      {props.characters.length}
+     <p> {props.characters.length} characters </p>
     </Card.Content>
   </Card>
   );

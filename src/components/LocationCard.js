@@ -11,7 +11,7 @@ export default function LocationCard(props) {
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
-      {props.residents.length}
+      <p>{props.residents.length} residents </p>
     </Card.Content>
   </Card>
   );

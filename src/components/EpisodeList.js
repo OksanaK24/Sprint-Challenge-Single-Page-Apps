@@ -13,7 +13,7 @@ export default function EpisodeList() {
         setEpisode(res.data.results)
        })
       .catch (err => console.log ("Try to fix your code"))
-  }, []);
+  }, [episodes]);
 
   return (
     <section className="character-list grid-view">
